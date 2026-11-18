@@ -77,22 +77,15 @@ The passing threshold of 75 is a sample rule for this project and can be adjuste
 9. Log out, log in as Staff, and demonstrate role restrictions.
 10. Close and reopen the program to prove that records persist.
 
-## 10. Screenshots
+## 10. Screenshots and video
+Save your own screenshots in the `screenshots/` folder:
+- Login screen
+- Dashboard
+- Student/subject/grade file operations
+- Reports
+- Theme customization
 
-### Login screen
-![Login screen](screenshots/login.png)
-
-### Dashboard
-![Dashboard](screenshots/dashboard.png)
-
-### Student / subject / grade file operations
-![File operations](screenshots/file_operations.png)
-
-### Reports
-![Reports](screenshots/reports.png)
-
-### Theme customization
-![Theme customization](screenshots/theme.png)
+Record your demonstration, explain the functions and TXT file handling, then upload it to the Facebook and YouTube destinations required by your instructor. Submit the accessible links through your LMS.
 
 ## 11. GitHub submission checklist
 - Upload all `.py` files, `data/` sample files, README, requirements, and screenshots.
@@ -104,9 +97,3 @@ The passing threshold of 75 is a sample rule for this project and can be adjuste
 - This is an educational local terminal project, not a production student-record platform.
 - The text files do not provide encryption at rest or multi-user file locking.
 - ANSI colors work in most modern terminals. If colors do not display, use a terminal with ANSI escape support.
-
-  ## Author
-  Khiven Mike Oyangurin
-
-  ## Acknowledgement
-  Miarose Mi-ot
