@@ -95,14 +95,16 @@ Record your demonstration, explain the functions and TXT file handling, then upl
 
 ![Theme customization](screenshots/theme.png)
 
-## 11. GitHub submission checklist
-- Upload all `.py` files, `data/` sample files, README, requirements, and screenshots.
-- Do not publish personal student information or real credentials.
-- Invite `natzjun2@gmail.com` as a repository collaborator if your instructor requires it.
-- Verify that the repository and video links are accessible to your instructor.
-
-## 12. Limitations / notes
+## 11. Limitations / notes
 - This is an educational local terminal project, not a production student-record platform.
 - The text files do not provide encryption at rest or multi-user file locking.
 - ANSI colors work in most modern terminals. If colors do not display, use a terminal with ANSI escape support.
 
+<<<<<<< HEAD
+=======
+  ## Author
+  Khiven Mike Oyangurin
+
+  ## Acknowledgement
+  Miarose Mi-ot
+>>>>>>> 29c587f486169e9b55ccca1b7e5f22c27df69c7f
