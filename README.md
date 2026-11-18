@@ -1,19 +1,19 @@
-# Student Information Management System (SIMS)
+# Student Information System
 
-**Python Final Laboratory Project — Terminal-Based Management System with File Handling**
+**Python Final Laboratory Project: Terminal-Based Management System with File Handling**
 
 ## 1. Project description
-SIMS is a menu-driven, terminal-based application for maintaining student profiles, subjects, and grades. It uses plain-text `.txt` files for persistent storage and provides role-based login, reports, input validation, and two terminal color themes.
+The Student Information System is a menu-driven, terminal-based application for managing student profiles, subjects, and grades. It uses plain-text `.txt` files for storage and provides role-based login, reports, input validation, and two terminal color themes.
 
 ## 2. Features
 - Administrator and Staff login roles
-- Passwords stored as salted PBKDF2-HMAC-SHA256 hashes (not plain text)
-- Student add, view, search, update, and delete
-- Subject add, view, and search
-- Grade encoding, updating, viewing, and average calculation
-- Student records report, academic performance report, and system summary
-- Retro Hacker (green) and Classic Amber themes
-- Password change and administrator account creation
+- Passwords stored as salted SHA-256 hashes (not plain text)
+- Student add, view, and search
+- Subject add (Administrator only) and view
+- Grade encoding with validation (0 to 100)
+- Student report card and class summary
+- Two color themes (Green and Cyan)
+- Password change
 - Data remains saved after closing and reopening the program
 
 ## 3. Requirements
@@ -22,8 +22,8 @@ SIMS is a menu-driven, terminal-based application for maintaining student profil
 - No third-party packages are required
 
 ## 4. Installation and running
-1. Extract the project ZIP file.
-2. Open a terminal in the `Student_Information_Management_System` folder.
+1. Download or clone this repository.
+2. Open a terminal in the `Student-Information-System` folder.
 3. Run:
 
    ```bash
@@ -32,68 +32,89 @@ SIMS is a menu-driven, terminal-based application for maintaining student profil
 
    On some systems, use `python3 main.py`.
 
-The program automatically creates missing data files in the `data` folder.
+The program automatically creates missing `.txt` files when it starts.
 
 ## 5. Demo accounts
-The first run creates these sample accounts only when `data/users.txt` is empty:
+The first run creates these sample accounts only when `users.txt` is empty:
 
 | Role | Username | Initial password |
 |---|---|---|
-| Administrator | `admin` | `Admin@123` |
-| Staff | `staff` | `Staff@123` |
+| Administrator | `admin` | `admin123` |
+| Staff | `staff` | `staff123` |
 
-**Security reminder:** These are demonstration credentials, not production credentials. Log in and change the passwords before using real information. Do not upload real passwords or sensitive personal information to a public repository. The `users.txt` file contains salted password hashes, not readable passwords.
+**Security reminder:** These are demonstration credentials only. The `users.txt` file stores salted password hashes, not readable passwords. Do not upload real passwords or sensitive personal information to a public repository.
 
 ## 6. Text database format
-Files are stored in the `data/` directory. Fields are separated by the pipe character (`|`).
+Fields are separated by the pipe character (`|`).
 
-- `users.txt`: username, role, salt, password hash
-- `students.txt`: student ID, first name, last name, course, year level, email
-- `subjects.txt`: subject code, subject name, units
-- `grades.txt`: student ID, subject code, grade, semester
+- `users.txt`: username, salt, password hash, role
+- `students.txt`: student ID, full name, course, year level
+- `subjects.txt`: subject code, subject title, units
+- `grades.txt`: student ID, subject code, grade
 
-The application reads records when a menu action is used and writes changes back to the text files. The files are plain text and can be inspected with a text editor. Avoid typing the `|` character into field values because it is the field separator.
+The program reads records when a menu option is used and writes changes back to the text files. Avoid typing the `|` character in field values because it is the field separator.
 
 ## 7. Role permissions
-- **Administrator:** all student and subject operations, grade operations, reports, settings, and user account creation.
-- **Staff:** view and search students and subjects, encode/view grades, calculate averages, view reports, and change personal password/theme. Staff cannot add/update/delete student records or add subjects.
+- **Administrator:** all features, including adding subjects.
+- **Staff:** add, view, and search students, view subjects, add grades, view reports, change theme, and change own password. Staff cannot add subjects.
 
 ## 8. Reports
-1. Student Records Report — lists registered students and total count.
-2. Academic Performance Report — calculates each student's average from recorded grade entries and labels averages of 75 or higher as PASSED.
-3. Overall System Summary — counts students, subjects, and grade entries and displays the overall recorded grade average.
+1. **Student Report Card:** shows one student's subjects, grades, and average.
+2. **Class Summary:** shows each student's average with a Passed or Failed status, the number of graded students, how many passed, and the top student.
 
-The passing threshold of 75 is a sample rule for this project and can be adjusted to match your instructor's grading policy.
+The passing grade of 75 is a sample rule and can be changed in `main.py`.
 
-## 9. Suggested demonstration sequence
-1. Start `main.py` and show the login screen.
-2. Log in as Administrator and show the dashboard/date/time.
-3. Add a student and show the saved entry in `data/students.txt`.
-4. Add a subject and encode a grade for the student.
-5. Search for the student and display the student list.
-6. Open the reports menu and demonstrate the student report, academic report, and system summary.
-7. Open Settings and switch between both color themes.
-8. Change the administrator password.
-9. Log out, log in as Staff, and demonstrate role restrictions.
-10. Close and reopen the program to prove that records persist.
+## 9. Demonstration sequence
+1. Run `main.py` and show the login screen.
+2. Log in as Administrator and show the main dashboard.
+3. Add a student and view the student list.
+4. Search for a student by ID or name.
+5. Add a subject and view the subject list.
+6. Add a grade for a student.
+7. Open the Report Card and Class Summary.
+8. Change the color theme.
+9. Change the password.
+10. Log out and run the program again to show that records are saved.
 
-## 10. Screenshots and video
-Save your own screenshots in the `screenshots/` folder:
-- Login screen
-- Dashboard
-- Student/subject/grade file operations
-- Reports
-- Theme customization
+## 10. Screenshots
 
-Record your demonstration, explain the functions and TXT file handling, then upload it to the Facebook and YouTube destinations required by your instructor. Submit the accessible links through your LMS.
+### Login
+![Login](screenshots/login.png)
 
-## 11. GitHub submission checklist
-- Upload all `.py` files, `data/` sample files, README, requirements, and screenshots.
-- Do not publish personal student information or real credentials.
-- Invite `natzjun2@gmail.com` as a repository collaborator if your instructor requires it.
-- Verify that the repository and video links are accessible to your instructor.
+### Main Dashboard
+![Main Dashboard](screenshots/Main%20dashboard.png)
+
+### Add Student
+![Add Student](screenshots/Add%20student.png)
+
+### View Subjects
+![View Subjects](screenshots/View%20subjects.png)
+
+### Add Grade
+![Add Grade](screenshots/Add%20grade.png)
+
+### Student Report Card
+![Student Report Card](screenshots/Student%20report%20card.png)
+
+### Class Summary
+![Class Summary](screenshots/Class%20summary.png)
+
+### Theme Customization
+![Theme](screenshots/Theme.png)
+
+## 11. Files
+- `main.py`
+- `users.txt`
+- `students.txt`
+- `subjects.txt`
+- `grades.txt`
+- `screenshots/`
 
 ## 12. Limitations / notes
 - This is an educational local terminal project, not a production student-record platform.
-- The text files do not provide encryption at rest or multi-user file locking.
-- ANSI colors work in most modern terminals. If colors do not display, use a terminal with ANSI escape support.
+- The text files are not encrypted and do not support multi-user file locking.
+- ANSI colors work in most modern terminals. If colors do not display, use a terminal that supports ANSI escape codes.
+
+## 13. Author
+Banua, Shekyla S.
+BSCS 2nd Year-A
