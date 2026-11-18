@@ -116,5 +116,9 @@ The passing grade of 75 is a sample rule and can be changed in `main.py`.
 - ANSI colors work in most modern terminals. If colors do not display, use a terminal that supports ANSI escape codes.
 
 ## 13. Author
+Khiven Mike Oyangurin
+
+## 14. Acknowledgement
+Miarose Mi-ot
 Banua, Shekyla S.
 BSCS 2nd Year-A
