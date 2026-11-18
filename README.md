@@ -85,7 +85,15 @@ Save your own screenshots in the `screenshots/` folder:
 - Reports
 - Theme customization
 
-Record your demonstration, explain the functions and TXT file handling, then upload it to the Facebook and YouTube destinations required by your instructor. Submit the accessible links through your LMS.
+Record your demonstration, explain the functions and TXT file handling, then upload it to the Facebook and YouTube destinations required by your instructor. Submit the accessible links through your LMS.nn![Login screen](screenshots/login.png)
+
+![Dashboard](screenshots/dashboard.png)
+
+![File operations](screenshots/file_operations.png)
+
+![Reports](screenshots/reports.png)
+
+![Theme customization](screenshots/theme.png)
 
 ## 11. GitHub submission checklist
 - Upload all `.py` files, `data/` sample files, README, requirements, and screenshots.
@@ -97,3 +105,4 @@ Record your demonstration, explain the functions and TXT file handling, then upl
 - This is an educational local terminal project, not a production student-record platform.
 - The text files do not provide encryption at rest or multi-user file locking.
 - ANSI colors work in most modern terminals. If colors do not display, use a terminal with ANSI escape support.
+
